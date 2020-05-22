@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chuck Norris Jokes</title>
+
+    <link rel="shortcut icon" href="./favicon.ico" type="image/x-icon">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+    <link rel="stylesheet" href="./css/styles.min.css" type="text/css">
+  </head>
+
+  <body>
+    <main>
+      <div class="menu" id="open">
+        <img src="./images/menu.svg" alt="menu button">
+        Favourite
+      </div>
+
+      <header>
+        <h2>MSI 2020</h2>
+      </header>
+
+      <section class="control">
+        <h1>Hey!</h1>
+        <h3>Let's try to find a joke for you:</h3>
+
+        <div class="control-menu" id="control-menu">
+          <div class="radioBlock">
+            <input type="radio" class="opt-radio" name="options" id="random" value="random" required>
+            <label for="random" class="opt-radio">Random</label>
+          </div>
+
+          <div class="radioBlock">
+            <input type="radio" class="opt-radio" name="options" id="category" value="category">
+            <label for="category" class="opt-radio">From categories</label>
+
+            <!-- generate category buttons -->
+            <div class="buttons optional" id="buttons">
+              <p id="loading" class="loading">Loading...</p>
+              <!-- <button type="button" class="active btn category" value="animal">ANIMAL</button>-->
+            </div>
+          </div>
+
+          <div class="radioBlock">
+            <input type="radio" class="opt-radio" name="options" id="search" value="search">
+            <label for="search" class="opt-radio">Search</label>
+
+            <div class="searchInput optional">
+              <input type="text" class="search" id="search-input" name="search" placeholder="Free text search...">
+            </div>
+          </div>
+
+          <div class="submitBlock">
+            <span class="popuptext" id="fill-form-warn">Fill form or choose 'Random'</span>
+            <button type="button" name="get-joke" class="get-joke">Get a joke</button>
+          </div>
+
+        </div>
+      </section>
+
+      <section class="jokes" id="jokes">
+        <!-- generate jokes according to this template -->
+        <template>
+          <div class="joke">
+            <figure class="mark">
+              <img src="./images/heart.svg" class="save" alt="heart icon">
+            </figure>
+
+            <div class="info">
+              <figure>
+                <img src="./images/message.svg" alt="message icon">
+              </figure>
+
+              <div class="binding">
+                <p class="link">ID:
+                  <a href="#" class="joke-link" target="_blank">sdSDCsdcSCweCWCsdcS</a>
+                  <img src="./images/link.svg" alt="link icon">
+                </p>
+
+                <p class="text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                  Aliquam non vulputate lectus, ut pharetra justo. Suspendisse
+                  vehicula auctor</p>
+
+                <div class="footer">
+                  <p class="date">Last update: <span class="hours">1923 hours ago</span></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </template>
+      </section>
+    </main>
+
+    <aside class="favourite" id="favourite">
+      <div class="menu" id="close">
+        <img src="./images/menu-close.svg" alt="menu button">
+        Favourite
+      </div>
+      <!-- generate favourite jokes -->
+
+      <!-- menu button for laptop -->
+      <div class="laptop">Favourite</div>
+      <!-- text if there are no jokes in favourite section -->
+      <div class="emptyFavSection" id="emptyFavSection">No favourite jokes yet</div>
+    </aside>
+
+    <!--semi transparent overlay for main section when favourite section is open-->
+    <div id="overlay" class="overlay"></div>
+    <script src="./js/script.min.js"></script>
+  </body>
+</html>
