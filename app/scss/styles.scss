@@ -289,7 +289,6 @@ header {
 }
 
 .date {
-  float: left;
   margin-top: 5px;
 
   span {
@@ -301,7 +300,6 @@ header {
   border: none;
   color: $primary-color;
   cursor: auto;
-  float: right;
   font-size: 0.625em;
   line-height: 140%;
   margin: 0;
@@ -416,6 +414,14 @@ header {
   .menu {
     right: 40px;
     top: 40px;
+  }
+
+  .date {
+    float: left;
+  }
+
+  .joke .btn {
+    float: right;
   }
 
   .favourite {
