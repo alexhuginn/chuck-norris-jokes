@@ -112,9 +112,6 @@ function toggleFavSection() {
     favSection.classList.add('slide');
     overlay.style.display = "block";
 
-    // disable scrolling body when favSection is open
-    document.body.style.overflowY = "hidden";
-
   } else {
     // if click close button
     button = menuButtonClose; // in case when click on overlay
@@ -122,8 +119,6 @@ function toggleFavSection() {
 
     favSection.classList.remove('slide');
     overlay.style.display = "none";
-    // allow scrolling body when favSection is closed
-    document.body.style.overflowY = "auto";
   }
 
   // hide menu button

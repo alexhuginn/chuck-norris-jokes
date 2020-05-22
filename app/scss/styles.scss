@@ -310,7 +310,7 @@ header {
 .favourite {
   background-color: $active-color;
   min-height: 100%;
-  position: absolute;
+  position: fixed;
   padding-top: 88px;
   top: 0;
   right: -100%;
@@ -441,6 +441,11 @@ header {
     display: flex;
   }
 
+  body,
+  .favourite {
+    height: auto;
+  }
+
   main {
     padding: 40px 140px;
   }
@@ -451,9 +456,10 @@ header {
 
   .laptop {
     display: block;
+    left: auto;
   }
 
   .favourite {
-    position: sticky;
+    position: static;
   }
 }
